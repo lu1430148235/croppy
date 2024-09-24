@@ -1,0 +1,12 @@
+[
+{
+  "directory": "C:/Users/asus/AppData/Local/Pub/Cache/hosted/pub.dev/croppy-1.1.4/android/.cxx/Debug/6h4r555e/arm64-v8a",
+  "command": "C:\\Users\\asus\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/asus/AppData/Local/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/asus/AppData/Local/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DDART_SHARED_LIB -Dcroppy_EXPORTS -IC:/Users/asus/AppData/Local/Pub/Cache/hosted/pub.dev/croppy-1.1.4/src/kiwi -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles\\croppy.dir\\fit_polygon_in_quad.cpp.o -c C:\\Users\\asus\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\croppy-1.1.4\\src\\fit_polygon_in_quad.cpp",
+  "file": "C:\\Users\\asus\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\croppy-1.1.4\\src\\fit_polygon_in_quad.cpp"
+},
+{
+  "directory": "C:/Users/asus/AppData/Local/Pub/Cache/hosted/pub.dev/croppy-1.1.4/android/.cxx/Debug/6h4r555e/arm64-v8a",
+  "command": "C:\\Users\\asus\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=aarch64-none-linux-android21 --gcc-toolchain=C:/Users/asus/AppData/Local/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/asus/AppData/Local/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DDART_SHARED_LIB -Dcroppy_EXPORTS -IC:/Users/asus/AppData/Local/Pub/Cache/hosted/pub.dev/croppy-1.1.4/src/kiwi -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -fno-limit-debug-info  -fPIC -o CMakeFiles\\croppy.dir\\croppy.c.o -c C:\\Users\\asus\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\croppy-1.1.4\\src\\croppy.c",
+  "file": "C:\\Users\\asus\\AppData\\Local\\Pub\\Cache\\hosted\\pub.dev\\croppy-1.1.4\\src\\croppy.c"
+}
+]

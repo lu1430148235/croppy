@@ -1,0 +1,4 @@
+# ninja log v5
+0	186	724660152	CMakeFiles/croppy.dir/croppy.c.o	654e0b3e42212e23
+10	3091	724660154	CMakeFiles/croppy.dir/fit_polygon_in_quad.cpp.o	dfd576bf05aa617e
+3092	3339	724660155	D:/code/yijian_app/build/croppy/intermediates/cxx/Debug/3d6u291q/obj/arm64-v8a/libcroppy.so	f3813c4f037910c0

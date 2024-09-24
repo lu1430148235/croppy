@@ -4,7 +4,7 @@ class CroppyLocalizationsEn extends CroppyLocalizations {
   CroppyLocalizationsEn() : super('en');
 
   @override
-  String get cancelLabel => 'Cancel';
+  String get cancelLabel => '取消';
 
   @override
   String get cupertinoFreeformAspectRatioLabel => 'FREEFORM';
@@ -13,13 +13,13 @@ class CroppyLocalizationsEn extends CroppyLocalizations {
   String get cupertinoOriginalAspectRatioLabel => 'ORIGINAL';
 
   @override
-  String get cupertinoResetLabel => 'RESET';
+  String get cupertinoResetLabel => '重置';
 
   @override
-  String get cupertinoSquareAspectRatioLabel => 'SQUARE';
+  String get cupertinoSquareAspectRatioLabel => '1:1';
 
   @override
-  String get doneLabel => 'Done';
+  String get doneLabel => '确定';
 
   @override
   String get materialFreeformAspectRatioLabel => 'Free';
@@ -32,11 +32,11 @@ class CroppyLocalizationsEn extends CroppyLocalizations {
   String get materialOriginalAspectRatioLabel => 'Original';
 
   @override
-  String get materialResetLabel => 'Reset';
+  String get materialResetLabel => '重置';
 
   @override
-  String get materialSquareAspectRatioLabel => 'Square';
+  String get materialSquareAspectRatioLabel => '1:1';
 
   @override
-  String get saveLabel => 'Save';
+  String get saveLabel => '保存';
 }

@@ -73,10 +73,6 @@ mixin AnimatedControllerMixin on CroppableImageControllerWithMixins {
     });
   }
 
-  /// Whether there's currently an ongoing animation for resetting the image's
-  /// aspect ratio during init.
-  var _isSettingAspectRatioOnInit = false;
-
   @override
   Future<void> maybeSetAspectRatioOnInit() async {
     await Future.delayed(kCupertinoImageCropperPageTransitionDuration);
@@ -84,25 +80,10 @@ mixin AnimatedControllerMixin on CroppableImageControllerWithMixins {
     viewportScaleAnimationController.duration =
         kCupertinoImageCropperPageTransitionDuration;
 
-    _isSettingAspectRatioOnInit = true;
     await animatedNormalizeAfterTransform(super.maybeSetAspectRatioOnInit);
-
-    _isSettingAspectRatioOnInit = false;
-    recomputeValueNotifiers();
 
     viewportScaleAnimationController.duration =
         const Duration(milliseconds: 150);
-  }
-
-  @override
-  void recomputeValueNotifiers() {
-    super.recomputeValueNotifiers();
-
-    // We don't want to show the reset button during the initial aspect ratio
-    // animation.
-    if (_isSettingAspectRatioOnInit) {
-      canResetNotifier.value = false;
-    }
   }
 
   @override
@@ -168,7 +149,7 @@ mixin AnimatedControllerMixin on CroppableImageControllerWithMixins {
   @override
   void reset() {
     data = data.copyWith(
-      baseTransformations: data.baseTransformations,
+      baseTransformations: data.baseTransformations.normalized,
     );
 
     animatedNormalizeAfterTransform(

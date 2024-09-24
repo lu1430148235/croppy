@@ -1,0 +1,59 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "croppy",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "croppy::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-croppy-Debug-b3f2f02bedb8176e9a17.json",
+					"name" : "croppy",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/asus/AppData/Local/Pub/Cache/hosted/pub.dev/croppy-1.1.4/android/.cxx/Debug/6h4r555e/arm64-v8a",
+		"source" : "C:/Users/asus/AppData/Local/Pub/Cache/hosted/pub.dev/croppy-1.1.4/src"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 1
+	}
+}

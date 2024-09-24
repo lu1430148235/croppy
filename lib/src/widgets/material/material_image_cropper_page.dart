@@ -9,27 +9,23 @@ class MaterialImageCropperPage extends StatelessWidget {
     required this.shouldPopAfterCrop,
     this.gesturePadding = 16.0,
     this.heroTag,
-    this.themeData,
   });
 
   final CroppableImageController controller;
   final double gesturePadding;
   final Object? heroTag;
   final bool shouldPopAfterCrop;
-  final ThemeData? themeData;
 
   @override
   Widget build(BuildContext context) {
-    final theme = themeData ?? generateMaterialImageCropperTheme(context);
-
     return Theme(
-      data: theme,
+      data: generateMaterialImageCropperTheme(context),
       child: AnnotatedRegion<SystemUiOverlayStyle>(
         value: const SystemUiOverlayStyle(
           statusBarBrightness: Brightness.dark,
           statusBarIconBrightness: Brightness.light,
-          statusBarColor: Colors.black,
-          systemNavigationBarColor: Colors.black,
+          statusBarColor: Colors.transparent,
+          systemNavigationBarColor: Colors.transparent,
           systemNavigationBarIconBrightness: Brightness.light,
         ),
         child: CroppableImagePageAnimator(
@@ -37,7 +33,7 @@ class MaterialImageCropperPage extends StatelessWidget {
           heroTag: heroTag,
           builder: (context, overlayOpacityAnimation) {
             return Scaffold(
-              backgroundColor: theme.scaffoldBackgroundColor,
+              backgroundColor: Colors.black,
               body: SafeArea(
                 child: Column(
                   children: [

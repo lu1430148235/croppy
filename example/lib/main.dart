@@ -1,10 +1,8 @@
-import 'dart:io';
 import 'dart:math';
 
 import 'package:croppy/croppy.dart';
 import 'package:example/custom_cropper.dart';
 import 'package:example/settings_modal.dart';
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -51,8 +49,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.orange,
-          // primary: Colors.purple,
-          brightness: Brightness.light,
+          primary: Colors.orange,
+          brightness: Brightness.dark,
         ),
         useMaterial3: true,
       ),
@@ -91,25 +89,6 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
-  Future<void> _pickImage() async {
-    final result = await FilePicker.platform.pickFiles(
-      type: FileType.image,
-      allowMultiple: false,
-    );
-
-    if (result != null && result.files.isNotEmpty) {
-      final path = result.files.first.path!;
-
-      if (kIsWeb) {
-        _imageProviders.insert(0, NetworkImage(path));
-      } else {
-        _imageProviders.insert(0, FileImage(File(path)));
-      }
-
-      setState(() {});
-    }
-  }
-
   @override
   void dispose() {
     _pageController.dispose();
@@ -143,11 +122,6 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          FloatingActionButton.extended(
-            onPressed: _pickImage,
-            label: const Text('Pick image'),
-          ),
-          const SizedBox(width: 16.0),
           FloatingActionButton(
             onPressed: () {
               final page = _pageController.page?.round() ?? 0;

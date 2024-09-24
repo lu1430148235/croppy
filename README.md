@@ -23,8 +23,6 @@ Supported platforms:
 - macOS
 - Web (uses Dart's Cassowary instead of FFI because there's no FFI support in web)
 
-NOTE: see https://github.com/kekland/croppy/issues/38. Currently I'm very busy with other projects so support might be limited.
-
 ## Features
 
 - Material image cropper (similar to Google Photos)
@@ -81,18 +79,15 @@ For a complete runnable example, see `./example`. For the full in-depth document
 - Arabic (thanks @Milad-Akarie)
 - Vietnamese (thanks @ptanhVNU)
 - Portuguese (thanks @JCKodel)
-- Spanish (thanks @Thesergiolg99)
-- Chinese (thanks @yohom and @zhushenwudi)
-- Hebrew (thanks @kfiross)
 
 If there's a language that you would like to add, please see the [localization](./doc/localization.md) guide.
 
-It's recommended to insert the `CroppyLocalizations.delegate` in your `MaterialApp` or `CupertinoApp`:
+It's recommended to insert the `CroppyLocalizationDelegate` in your `MaterialApp` or `CupertinoApp`:
 
 ```dart
 MaterialApp(
   localizationsDelegates: [
-    CroppyLocalizations.delegate, // <- This here
+    CroppyLocalizationDelegate(), // <- This here
     GlobalMaterialLocalizations.delegate,
     GlobalWidgetsLocalizations.delegate,
     GlobalCupertinoLocalizations.delegate,

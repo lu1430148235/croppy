@@ -1,8 +1,7 @@
 import 'dart:math';
 
-import 'package:flutter/cupertino.dart';
-
 import 'package:croppy/src/src.dart';
+import 'package:flutter/cupertino.dart';
 
 class CupertinoRotationSlider extends StatefulWidget {
   const CupertinoRotationSlider({

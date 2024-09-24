@@ -1,8 +1,7 @@
 import 'dart:math';
 
-import 'package:flutter/material.dart';
-
 import 'package:croppy/croppy.dart';
+import 'package:flutter/material.dart';
 
 class MaterialRotationSlider extends StatefulWidget {
   const MaterialRotationSlider({
@@ -61,10 +60,7 @@ class _MaterialRotationSliderState extends State<MaterialRotationSlider> {
     );
 
     painter.layout();
-    final width = painter.width;
-    painter.dispose();
-
-    return width;
+    return painter.width;
   }
 
   @override
@@ -72,7 +68,7 @@ class _MaterialRotationSliderState extends State<MaterialRotationSlider> {
     final l10n = CroppyLocalizations.of(context)!;
     final theme = Theme.of(context);
 
-    final color = widget.color ?? theme.colorScheme.onSurface;
+    final color = widget.color ?? theme.colorScheme.onBackground;
     final activeColor = widget.activeColor ?? theme.colorScheme.primary;
 
     final labelStyle = theme.textTheme.labelMedium?.copyWith(color: color);
@@ -101,7 +97,7 @@ class _MaterialRotationSliderState extends State<MaterialRotationSlider> {
                         l10n.getRoundedDegrees(rotationZ * 180 / pi),
                         style: labelStyle?.copyWith(
                           color: value.abs() > epsilon
-                              ? theme.colorScheme.primary
+                              ? const Color(0xff8974ff)
                               : null,
                         ),
                       ),

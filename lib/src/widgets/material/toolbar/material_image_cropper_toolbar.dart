@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
-
 import 'package:croppy/croppy.dart';
 import 'package:croppy/src/widgets/material/toolbar/material_rotation_slider.dart';
+import 'package:flutter/material.dart';
 
 class MaterialImageCropperToolbar extends StatelessWidget {
   const MaterialImageCropperToolbar({super.key, required this.controller});
@@ -18,8 +17,7 @@ class MaterialImageCropperToolbar extends StatelessWidget {
         children: [
           if (controller.isTransformationEnabled(Transformation.rotateZ))
             MaterialRotationSlider(
-              controller: controller,
-            ),
+                controller: controller, activeColor: const Color(0xff8974ff)),
           Stack(
             children: [
               Center(
@@ -40,6 +38,7 @@ class MaterialImageCropperToolbar extends StatelessWidget {
                                 (controller as MaterialCroppableImageController)
                                     .aspectRatioNotifier,
                             builder: (context, ar, _) => IconButton(
+                              color: Color(0xff8974FF),
                               onPressed: () {
                                 showModalBottomSheet(
                                   context: context,
@@ -92,32 +91,32 @@ class MaterialImageCropperToolbar extends StatelessWidget {
                   ),
                 ),
               ),
-              Align(
-                alignment: Alignment.centerRight,
-                child: ValueListenableBuilder(
-                  valueListenable: controller.canResetNotifier,
-                  builder: (context, canReset, child) => AnimatedOpacity(
-                    opacity: canReset ? 1.0 : 0.0,
-                    duration: const Duration(milliseconds: 200),
-                    curve: Curves.easeInOut,
-                    child: IgnorePointer(
-                      ignoring: !canReset,
-                      child: child,
-                    ),
-                  ),
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(
-                      minWidth: 72.0,
-                      minHeight: 48.0,
-                      maxHeight: 48.0,
-                    ),
-                    child: TextButton(
-                      onPressed: () => controller.reset(),
-                      child: Text(l10n.materialResetLabel),
-                    ),
-                  ),
-                ),
-              ),
+              // Align(
+              //   alignment: Alignment.centerRight,
+              //   child: ValueListenableBuilder(
+              //     valueListenable: controller.canResetNotifier,
+              //     builder: (context, canReset, child) => AnimatedOpacity(
+              //       opacity: canReset ? 1.0 : 0.0,
+              //       duration: const Duration(milliseconds: 200),
+              //       curve: Curves.easeInOut,
+              //       child: IgnorePointer(
+              //         ignoring: !canReset,
+              //         child: child,
+              //       ),
+              //     ),
+              //     child: ConstrainedBox(
+              //       constraints: const BoxConstraints(
+              //         minWidth: 72.0,
+              //         minHeight: 48.0,
+              //         maxHeight: 48.0,
+              //       ),
+              //       child: TextButton(
+              //         onPressed: () => controller.reset(),
+              //         child: Text(l10n.materialResetLabel),
+              //       ),
+              //     ),
+              //   ),
+              // ),
             ],
           ),
           const SizedBox(height: 8.0),

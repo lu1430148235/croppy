@@ -1,0 +1,4 @@
+# ninja log v5
+7	90	724660421	CMakeFiles/croppy.dir/croppy.c.o	7a3a031c89b1794d
+0	3541	724660424	CMakeFiles/croppy.dir/fit_polygon_in_quad.cpp.o	c904eab3ac7e9fd9
+3542	3667	724660424	D:/code/yijian_app/build/croppy/intermediates/cxx/RelWithDebInfo/421v1164/obj/x86/libcroppy.so	8719a9f07985ac05

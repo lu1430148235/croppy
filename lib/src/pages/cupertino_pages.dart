@@ -36,10 +36,6 @@ import 'package:flutter/cupertino.dart';
 ///
 /// The [locale] is used to localize the UI. If not provided, the locale from
 /// the [WidgetsApp] is used.
-///
-/// You can use the [themeData] to customize the appearance of the cropper. If
-/// none is provided, a new CupertinoThemeData will be constructed internally
-/// based on the primary color of the surrounding theme.
 Future<CropImageResult?> showCupertinoImageCropper(
   BuildContext context, {
   required ImageProvider imageProvider,
@@ -51,7 +47,6 @@ Future<CropImageResult?> showCupertinoImageCropper(
   Object? heroTag,
   bool shouldPopAfterCrop = true,
   Locale? locale,
-  CupertinoThemeData? themeData,
 }) async {
   late final CroppableImageData _initialData;
 
@@ -78,7 +73,6 @@ Future<CropImageResult?> showCupertinoImageCropper(
           heroTag: heroTag,
           controller: controller,
           shouldPopAfterCrop: shouldPopAfterCrop,
-          themeData: themeData,
         ),
       ),
     );

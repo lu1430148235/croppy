@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
-
 import 'package:croppy/src/src.dart';
+import 'package:flutter/cupertino.dart';
 
 class CupertinoImageCropperBottomAppBar extends StatelessWidget
     implements ObstructingPreferredSizeWidget {
@@ -28,7 +27,10 @@ class CupertinoImageCropperBottomAppBar extends StatelessWidget
             top: 16.0,
             bottom: 16.0,
           ),
-          child: Text(l10n.cancelLabel),
+          child: Text(
+            l10n.cancelLabel,
+            style: const TextStyle(color: CupertinoColors.white),
+          ),
         ),
         const Spacer(),
         FutureButton(

@@ -1,0 +1,3 @@
+C:/Users/asus/AppData/Local/Pub/Cache/hosted/pub.dev/croppy-1.1.4/android/.cxx/Debug/6h4r555e/arm64-v8a/CMakeFiles/croppy.dir
+C:/Users/asus/AppData/Local/Pub/Cache/hosted/pub.dev/croppy-1.1.4/android/.cxx/Debug/6h4r555e/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/asus/AppData/Local/Pub/Cache/hosted/pub.dev/croppy-1.1.4/android/.cxx/Debug/6h4r555e/arm64-v8a/CMakeFiles/rebuild_cache.dir

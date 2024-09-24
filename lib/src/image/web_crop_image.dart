@@ -7,19 +7,18 @@ import 'dart:ui' as ui;
 import 'package:croppy/src/src.dart';
 import 'package:flutter/material.dart';
 
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:js' as js;
+
 /// Obtains an [ui.Image] from an [ImageProvider].
 Future<ui.Image> obtainImage(ImageProvider provider) {
   final completer = Completer<ui.Image>();
-  final stream = provider.resolve(ImageConfiguration.empty);
 
-  late final ImageStreamListener listener;
-
-  listener = ImageStreamListener((ImageInfo info, bool _) {
+  provider
+      .resolve(ImageConfiguration.empty)
+      .addListener(ImageStreamListener((ImageInfo info, bool _) {
     completer.complete(info.image);
-    stream.removeListener(listener);
-  });
-
-  stream.addListener(listener);
+  }));
 
   return completer.future;
 }
@@ -189,9 +188,17 @@ Future<CropImageResult> cropImage(
   ui.Image image,
   CroppableImageData data,
 ) {
-  return cropImageCanvas(image, data);
+  if (js.context['flutterCanvasKit'] != null) {
+    return cropImageCanvas(image, data);
+  }
 
-  // NOTE: With wasm, this seems to no longer be needed. I'm keeping it here
-  // just in case though.
-  // return cropImageBilinear(image, data);
+  // For some reason, the canvas method doesn't work properly on web HTML
+  // renderer. So, we use the bilinear method for now.
+  //
+  // My suspicion is that the canvas method doesn't work because the canvas
+  // doesn't support 3d transforms. So, the canvas is not able to apply the
+  // perspective transform.
+  //
+  // TODO(Erzhan): Investigate this further.
+  return cropImageBilinear(image, data);
 }

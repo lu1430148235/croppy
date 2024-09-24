@@ -1,0 +1,3 @@
+D:/code/flutter_cache/hosted/pub.dev/croppy-1.1.4/android/.cxx/RelWithDebInfo/421v1164/x86_64/CMakeFiles/croppy.dir
+D:/code/flutter_cache/hosted/pub.dev/croppy-1.1.4/android/.cxx/RelWithDebInfo/421v1164/x86_64/CMakeFiles/edit_cache.dir
+D:/code/flutter_cache/hosted/pub.dev/croppy-1.1.4/android/.cxx/RelWithDebInfo/421v1164/x86_64/CMakeFiles/rebuild_cache.dir
